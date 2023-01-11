@@ -70,7 +70,7 @@ def produce(agencies, X_RapidAPI_Key, X_RapidAPI_Host):
         l["arr_route_name"]=""
       
 
-      producer.send("vehicle", json.dumps(l).encode())
+      producer.send("openapi-vehicle", json.dumps(l).encode())
       print(l)
  #  print("At {} the speed of vehicule is {} Kph".format(time.time(), vehicules[0]["speed"]))
   #print("the route of vehicule is {}".format(vehicules[1]["arrival_estimates"]))
