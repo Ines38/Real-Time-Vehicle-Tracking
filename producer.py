@@ -75,5 +75,5 @@ def produce(agencies, X_RapidAPI_Key, X_RapidAPI_Host):
  #  print("At {} the speed of vehicule is {} Kph".format(time.time(), vehicules[0]["speed"]))
   #print("the route of vehicule is {}".format(vehicules[1]["arrival_estimates"]))
 while True:
-  produce("12,20,32", your_X_RapidAPI_Key, your_X_RapidAPI_Host)
+  produce("12,16,20,24,32,60,64", "f349edde24msh28ec77d1154eb05p110e74jsn09565a49d509", "transloc-api-1-2.p.rapidapi.com")
   time.sleep(5)
