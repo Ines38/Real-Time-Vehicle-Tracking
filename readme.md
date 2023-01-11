@@ -1,10 +1,10 @@
-<h1 style="text-align: center;">
+<h1 align="center">
   <br>
   Real Time Vehicle Tracking
 </h1>
-<div style="text-align: center;">
+<div align="center">
   <h4>
-    <!-- <a href="#Context">Context</a> | --> 
+    <a href="#Context">Context</a> | <a href="#Technologies">Technologies</a> | <a href="#Installation guide">Installation guide</a> 
   </h4>
 </div>
 <br>
@@ -24,33 +24,33 @@ The software used
 - Kibana 7.14.1
 
 ## Installation guide
-- Start zookeeper:
+- Start zookeeper
   - cd kafka-directory
     ./bin/zookeeper-server-start.sh ./config/zookeeper.properties
 
-- Start kafka:
+- Start kafka
   - cd kafka-directory
     ./bin/kafka-server-start.sh ./config/server.properties
 
-- Create topic:
-  ./bin/kafka-topics.sh --create --topic openapi-vehicule --partitions 10 --bootstrap-server localhost:9092
+- Create topic
+  - ./bin/kafka-topics.sh --create --topic openapi-vehicule --partitions 10 --bootstrap-server localhost:9092
 
-- Start elasticsearch:
-  - cd elasticsearch-directory
+- Start elasticsearch
+  - cd elasticsearch-directory: 
     ./bin/elasticsearch
 
-- Start kibana:
-  - cd kibana-directory
+- Start kibana
+  - cd kibana-directory: 
     ./bin/kibana
 
-- Install packages:
+- Install packages
   - kafka
   - elasticsearch
   - pyspark
 
-- Launch producer:
-  python3 producer.py
+- Launch producer
+  - python3 producer.py
 
-- Launch consumer:
-  ./bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0,org.elasticsearch:elasticsearch-spark-30_2.12:7.14.1 consumer.py
+- Launch consumer
+  - ./bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0,org.elasticsearch:elasticsearch-spark-30_2.12:7.14.1 consumer.py
 
